@@ -1,0 +1,121 @@
+html,body,div,header,h1,h2,footer,p,ul,li,span,a,dl,dt,dd,
+section,canvas,input,button,form,textarea{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: sandybrown;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+html,body {
+    background: url(https://img1.3lian.com/2015/a1/27/d/93.jpg) no-repeat;
+    background-size: cover;
+}
+
+/*进度条*/
+input[type='range'] {
+    -webkit-appearance: none;
+    background-color: navajowhite;
+    height: 8px;
+    border-radius: 15px;
+    outline: none;
+}
+/*滑动块*/
+input[type='range']::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 12px;
+    width: 12px;
+    background: sandybrown;
+    border-radius: 100%;
+    border: none;
+}
+
+input[type='range']::-moz-range-track{
+    height: 8px;
+    background: navajowhite;
+    border-radius: 15px;
+    border: none;
+}
+input[type='range']::-moz-range-thumb{
+    height: 12px;
+    width: 12px;
+    background: sandybrown;
+    border: none;
+    border-radius: 100%;
+}
+header,.right{
+    /*布局采用绝对定位*/
+    position: absolute;
+}
+header{
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    height: 150px;
+    z-index: 10;
+}
+header button#add{
+    display: block;
+    color: white;
+    background-color: transparent;
+    margin: 10px auto;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+header input#loadfile{
+    display: none;
+}
+ul.type{
+    display: inline-block;
+    border: solid #fff 1px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+ul.type li{
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    width: 80px;
+}
+.right{
+    /*top: 150px;*/
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+
+@media screen and (max-width:800px),screen and (max-height:500px){
+    body{
+        font-size: 12px;
+    }
+    header{
+        height: 85px;
+    }
+    header h1{
+        font-size: 24px;
+        height: 34px;
+        line-height: 34px;
+    }
+    header button#add{
+        font-size: 20px;
+        height: 25px;
+        width: 40%;
+    }
+    ul.type{
+        margin-bottom: 2px;
+    }
+    ul.type li{
+        height: 19px;
+        line-height: 19px;
+    }
+    .right{
+        /*top:85px;*/
+    }
+}
